@@ -1,0 +1,2 @@
+# blhc doesn't complain, manual inspection is also happy
+libsys-cpu-perl: hardening-no-fortify-functions usr/lib/*/auto/Sys/CPU/CPU.so

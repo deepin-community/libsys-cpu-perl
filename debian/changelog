@@ -1,0 +1,118 @@
+libsys-cpu-perl (0.61-deepin1) unstable; urgency=medium
+
+  * Rebuild
+
+ -- Deepin Packages Builder <packages@deepin.org>  Mon, 14 Nov 2022 17:46:37 +0800
+
+libsys-cpu-perl (0.61-2) unstable; urgency=medium
+
+  [ gregor herrmann ]
+  * Strip trailing slash from metacpan URLs.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ gregor herrmann ]
+  * Drop TEST_VERBOSE from override_dh_auto_test, debhelper runs tests
+    verbosely since 9.20150501.
+  * Update path in lintian override.
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * Change bugtracker URL(s) to HTTPS.
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * Enable autopkgtests and make sure they run (only) the same test as the
+    package build. (Closes: #824844)
+  * Set bindnow linker flag in debian/rules.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 3.9.8.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 21 May 2016 15:18:56 +0200
+
+libsys-cpu-perl (0.61-1) unstable; urgency=medium
+
+  * Team upload.
+  * Imported Upstream version 0.61
+  * Drop test-cpu_type.patch patch
+  * Declare compliance with Debian policy 3.9.5
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 04 Jan 2014 10:30:25 +0100
+
+libsys-cpu-perl (0.54-1) unstable; urgency=low
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ gregor herrmann ]
+  * New upstream release.
+  * Update years of packaging copyright.
+  * Declare compliance with Debian Policy 3.9.4.
+  * Add lintian override (hardening-no-fortify-functions).
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 11 Oct 2013 22:26:22 +0200
+
+libsys-cpu-perl (0.52-3) unstable; urgency=low
+
+  * Test-More.patch: mark another test as TODO.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 30 Jun 2012 03:34:40 +0200
+
+libsys-cpu-perl (0.52-2) unstable; urgency=low
+
+  * New patch test-cpu_type.patch: fix test number output.
+  * New patch Test-More.patch: rewrite test using Test::More and mark the
+    cpu_type test as TODO, since /proc/cpuinfo doesn't always report the
+    requested information. (Closes: #679135)
+  * debian/rules: override_dh_auto_test to run our own test version.
+  * debian/copyright: update to Copyright-Format 1.0.
+  * Bump Standards-Version to 3.9.3 (no changes).
+  * Use debhelper 9.20120312 to get all hardening flags.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 29 Jun 2012 16:29:11 +0200
+
+libsys-cpu-perl (0.52-1) unstable; urgency=low
+
+  * Take over for the Debian Perl Group
+  * debian/control: Added: Vcs-Git field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza);
+    ${misc:Depends} to Depends: field. Changed: Maintainer set to Debian
+    Perl Group <pkg-perl-maintainers@lists.alioth.debian.org> (was:
+    Isaac Clerencia <isaac@sindominio.net>).
+  * Add debian/watch.
+
+  * New upstream release.
+  * Switch to "3.0 (quilt)" source format.
+  * Switch to debhelper compatibility level 9 to pass CFLAGS to
+    Makefile.PL/Build.PL. Use tiny debian/rules.
+  * Install README as upstream changelog.
+  * Add /me to Uploaders.
+  * Bump Standards-Version to 3.9.2 (no further changes).
+  * Add build dependency on perl.
+  * Update long and short description.
+  * debian/copyright: DEP5 format, update copyright years and maintainer
+    info.
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 19 Jan 2012 20:48:33 +0100
+
+libsys-cpu-perl (0.40-2.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * debian/{control,rules}: Use dh_perl and the fitting substvar to generate a
+    perlapi dep. (Closes: #463098)
+
+ -- Marc 'HE' Brockschmidt <he@debian.org>  Thu, 27 Mar 2008 16:15:51 +0100
+
+libsys-cpu-perl (0.40-2) unstable; urgency=low
+
+  * Fixed debian/dirs which contained bad directories
+
+ -- Isaac Clerencia <isaac@sindominio.net>  Wed,  4 Aug 2004 18:57:20 +0200
+
+libsys-cpu-perl (0.40-1) unstable; urgency=low
+
+  * Initial release, closes: #263434
+
+ -- Isaac Clerencia <isaac@sindominio.net>  Wed, 04 Aug 2004 16:41:39 +0100

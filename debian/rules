@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+TEST_FILES=$(shell cat debian/tests/pkg-perl/smoke-tests)
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+bindnow
+
+%:
+	dh $@
+
+override_dh_auto_test:
+	dh_auto_test -- TEST_FILES=$(TEST_FILES)

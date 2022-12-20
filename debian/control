@@ -1,0 +1,21 @@
+Source: libsys-cpu-perl
+Section: perl
+Priority: optional
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>
+Build-Depends: debhelper (>= 9.20120312),
+               perl
+Standards-Version: 3.9.8
+Homepage: https://metacpan.org/release/Sys-CPU
+Vcs-Git: https://anonscm.debian.org/git/pkg-perl/packages/libsys-cpu-perl.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-perl/packages/libsys-cpu-perl.git
+Testsuite: autopkgtest-pkg-perl
+
+Package: libsys-cpu-perl
+Architecture: any
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         ${shlibs:Depends}
+Description: module for getting CPU information
+ The Sys::CPU Perl offers an API to get the number of CPUs and its
+ speed and type. It reports numbers, type, and clockspeed of CPUs.

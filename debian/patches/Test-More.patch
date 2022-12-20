@@ -1,0 +1,30 @@
+Description: rewrite test with Test::More, mark tests as TODO
+Origin: vendor
+Bug-Debian: https://bugs.debian.org/679135
+Forwarded: no
+Author: gregor herrmann <gregoa@debian.org>
+Last-Update: 2012-06-30
+
+--- /dev/null
++++ b/t/Sys-CPU-Test-More.t
+@@ -0,0 +1,20 @@
++#!/usr/bin/perl
++
++use Test::More tests => 4;
++
++BEGIN { use_ok('Sys::CPU'); }
++
++$number = &Sys::CPU::cpu_count();
++ok( defined($number), "CPU Count: $number" );
++
++TODO: {
++    local $TODO = "/proc/cpuinfo doesn't always report 'cpu MHz' or 'clock' or 'bogomips' ...";
++    $speed = &Sys::CPU::cpu_clock();
++    ok( defined($speed), "CPU Speed: $speed" );
++}
++
++TODO: {
++    local $TODO = "/proc/cpuinfo doesn't always report 'model name' or 'machine' ...";
++    $type = &Sys::CPU::cpu_type();
++    ok( defined($type), "CPU Type:  $type" );
++}
